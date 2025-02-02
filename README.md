@@ -1,2 +1,52 @@
 # daas_docs
-Central repository to hold documentation specific to DaaS overall design
+
+## Description
+
+Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to dimonstrate a small platform to centralize data, and have it avaialble through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
+
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [High level project structure](#high-level-project-structure)
+- [Project Links](#project-links)
+- [Contact](#contact)
+
+## Technology Stack
+__Database__:  
+PostgreSQL  
+_Liquibase for src migrations_  
+
+__Cache:__  
+SOLR
+
+__API Layer:__  
+Python (Django)
+
+__Common components:__  
+Logging: Python standarrd logger  
+Configuration:  dynaconf  
+Secrets: dynaconf/cryptography
+
+## High level project structure
+
+    daas_py 						(ROOT)
+    ├───daas_py_api_asset 			(ASSET API)
+    │   ├───asset_api
+    │   │   ├───assets
+    │   │   ├───asset_api
+    ├───daas_py_common				(COMMON)
+    │   ├───util
+    ├───daas_py_config				(CONFIG)
+
+## Project Links
+### [daas_db](https://github.com/nealrout/daas_db) - PostgreSQL Liquibase
+
+### [daas_py_api_asset](https://github.com/nealrout/daas_py_api_asset) - Django API (Main)
+
+### [daas_py_common](https://github.com/nealrout/daas_py_common) - Common Utils
+
+### [daas_py_config](https://github.com/nealrout/daas_py_config) - Configuration & Secret Management
+
+## Contact
+Neal Routson  
+nroutson@gmail.com
