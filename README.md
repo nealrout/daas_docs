@@ -4,6 +4,7 @@
 
 Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to dimonstrate a small platform to centralize data, and have it avaialble through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
 
+
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
@@ -30,14 +31,14 @@ Secrets: dynaconf/cryptography
 
 ## High level project structure
 
-    daas_py 						(ROOT)
-    ├───daas_py_api_asset 			(ASSET API)
-    │   ├───asset_api
-    │   │   ├───assets
-    │   │   ├───asset_api
-    ├───daas_py_common				(COMMON)
-    │   ├───util
-    ├───daas_py_config				(CONFIG)
+    daas_py                    (ROOT)
+    ├───daas_py_api_asset      (ASSET API)
+    │   ├───asset_api          
+    │   │   ├───assets         
+    │   │   ├───asset_api      
+    ├───daas_py_common         (COMMON)
+    │   ├───util               
+    ├───daas_py_config         (CONFIG)
 
 ## Project Links
 ### [daas_db](https://github.com/nealrout/daas_db) - PostgreSQL Liquibase
