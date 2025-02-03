@@ -9,6 +9,7 @@ Single repository  to aggregate all documentation of projects related to DaaS (D
 - [Technology Stack](#technology-stack)
 - [High level project structure](#high-level-project-structure)
 - [Project Links](#project-links)
+- [Architecture](#architecture)
 - [Contact](#contact)
 
 ## Technology Stack
@@ -46,6 +47,9 @@ Secrets: dynaconf/cryptography
 ### [daas_py_common](https://github.com/nealrout/daas_py_common) - Common Utils
 
 ### [daas_py_config](https://github.com/nealrout/daas_py_config) - Configuration & Secret Management
+
+## Architecture
+![My Project Logo](daas_arch_high.png)
 
 ## Contact
 Neal Routson  
