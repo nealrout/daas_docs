@@ -51,6 +51,7 @@ Secrets: dynaconf/cryptography
 
 ### [daas_solr](https://github.com/nealrout/daas_solr) - SOLR instance setup
 
+### [daas_py_idx_asset](https://github.com/nealrout/daas_py_idx_asset) - Index manager - asset.
 
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
