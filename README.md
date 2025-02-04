@@ -49,6 +49,9 @@ Secrets: dynaconf/cryptography
 
 ### [daas_py_config](https://github.com/nealrout/daas_py_config) - Configuration & Secret Management
 
+### [daas_solr](https://github.com/nealrout/daas_solr) - SOLR instance setup
+
+
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
 
