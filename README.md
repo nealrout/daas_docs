@@ -2,12 +2,15 @@
 
 ## Description
 
-Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to dimonstrate a small platform to centralize data, and have it avaialble through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
+Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it avaialble through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
 
-__daas_py_api_facility__ is setup as a full Django application including ORM.  
-__daas_py_api_asset__ is setup as a custom more granular project with a managed DBMS layer.
+__daas_py_api__   
+is setup as a custom more granular project with a managed DBMS layer.  Is 100% common and re-usable for any domain with configurations.
 
-The idea is to have multple "choices" and models that could be used as boilerplate.
+__daas_py_api_facility__   
+is setup as a full Django application including ORM.  
+
+_The idea is to have multple "choices" and models that could be used as boilerplate._
 
 ## Table of Contents
 
@@ -46,15 +49,15 @@ Secrets: dynaconf/cryptography
 ## High level project structure
 
     daas_py                      (ROOT)
+    ├───daas_py_api              (GENERIC API)
+    │   ├───api         
+    │   │   ├───domain         
+    │   │   ├───api      
+    ├───daas_py_idx              (GENERIC INDEXER)
     ├───daas_py_api_facility     (FACILITY API)
     │   ├───facility_api         
     │   │   ├───facility         
     │   │   ├───facility_api      
-    ├───daas_py_api_asset        (ASSET API)
-    │   ├───asset_api            
-    │   │   ├───asset            
-    │   │   ├───asset_api   
-    ├───daas_py_idx              (GENERIC INDEXER)
     ├───daas_py_common           (COMMON)
     │   ├───util                 
     ├───daas_py_config           (CONFIG)
@@ -62,17 +65,17 @@ Secrets: dynaconf/cryptography
 ## Project Links
 ### [daas_db](https://github.com/nealrout/daas_db) - PostgreSQL Liquibase
 
+### [daas_py_api](https://github.com/nealrout/daas_py_api) - Django Generic API (Main)
+
 ### [daas_py_api_facility](https://github.com/nealrout/daas_py_api_facility) - Django Facility API (Main)
 
-### [daas_py_api_asset](https://github.com/nealrout/daas_py_api_asset) - Django Asset API (Main)
+### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Generic Index manager - (Main).
 
 ### [daas_py_common](https://github.com/nealrout/daas_py_common) - Common Utils
 
 ### [daas_py_config](https://github.com/nealrout/daas_py_config) - Configuration & Secret Management
 
 ### [daas_solr](https://github.com/nealrout/daas_solr) - SOLR instance setup
-
-### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Index manager - asset.
 
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
