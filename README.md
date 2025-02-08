@@ -35,7 +35,7 @@ Python
 
 This layer will listen to PostgreSQL NOTIFY events, and pull them off.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
 
-[example](https://github.com/nealrout/daas_py_idx_asset/blob/main/main.py)
+[example](https://github.com/nealrout/daas_py_idx/blob/main/main.py)
 
 
 __Common components:__  
@@ -54,7 +54,7 @@ Secrets: dynaconf/cryptography
     │   ├───asset_api            
     │   │   ├───asset            
     │   │   ├───asset_api   
-    ├───daas_py_idx_asset        (ASSET INDEXER)
+    ├───daas_py_idx              (GENERIC INDEXER)
     ├───daas_py_common           (COMMON)
     │   ├───util                 
     ├───daas_py_config           (CONFIG)
@@ -72,7 +72,7 @@ Secrets: dynaconf/cryptography
 
 ### [daas_solr](https://github.com/nealrout/daas_solr) - SOLR instance setup
 
-### [daas_py_idx_asset](https://github.com/nealrout/daas_py_idx_asset) - Index manager - asset.
+### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Index manager - asset.
 
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
