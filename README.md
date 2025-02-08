@@ -28,6 +28,16 @@ SOLR
 __API Layer:__  
 Python (Django)
 
+This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened by the index layer.
+
+__Index Layer:__ 
+Python
+
+This layer will listen to PostgreSQL NOTIFY events, and pull them off.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
+
+[example](https://github.com/nealrout/daas_py_idx_asset/blob/main/main.py)
+
+
 __Common components:__  
 Logging: Python standarrd logger  
 Configuration:  dynaconf  
@@ -43,7 +53,8 @@ Secrets: dynaconf/cryptography
     ├───daas_py_api_asset        (ASSET API)
     │   ├───asset_api            
     │   │   ├───asset            
-    │   │   ├───asset_api        
+    │   │   ├───asset_api   
+    ├───daas_py_idx_asset        (ASSET INDEXER)
     ├───daas_py_common           (COMMON)
     │   ├───util                 
     ├───daas_py_config           (CONFIG)
