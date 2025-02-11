@@ -38,7 +38,7 @@ Python
 
 This layer will listen to PostgreSQL NOTIFY events, and pull them off.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
 
-[example](https://github.com/nealrout/daas_py_idx/blob/develop/main.py)
+[example](https://github.com/nealrout/daas_py_idx/blob/develop/daas_py_idx/main.py)
 
 
 __Common components:__  
