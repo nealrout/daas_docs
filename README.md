@@ -49,6 +49,7 @@ Secrets: dynaconf/cryptography
 ## High level project structure
 
     daas_py                      (ROOT)
+    ├───daas_py_auth             (AUTH API)
     ├───daas_py_api              (GENERIC API)
     │   ├───api         
     │   │   ├───domain         
@@ -64,6 +65,8 @@ Secrets: dynaconf/cryptography
 
 ## Project Links
 ### [daas_db](https://github.com/nealrout/daas_db) - PostgreSQL Liquibase
+
+### [daas_py_auth](https://github.com/nealrout/daas_py_auth) - Django Authorize/Authenticate API
 
 ### [daas_py_api](https://github.com/nealrout/daas_py_api) - Django Generic API (Main)
 
