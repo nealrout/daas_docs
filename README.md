@@ -2,15 +2,8 @@
 
 ## Description
 
-Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it avaialble through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
+Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it availiable through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
 
-__daas_py_api__   
-is setup as a custom more granular project with a managed DBMS layer.  Is 100% common and re-usable for any domain with configurations.
-
-__daas_py_api_facility__   
-is setup as a full Django application including ORM.  
-
-_The idea is to have multple "choices" and models that could be used as boilerplate._
 
 ## Table of Contents
 
@@ -21,20 +14,27 @@ _The idea is to have multple "choices" and models that could be used as boilerpl
 - [Contact](#contact)
 
 ## Technology Stack
-__Database__:  
-PostgreSQL  
+### Database:  
+__PostgreSQL__  
 _Liquibase for src migrations_  
 
-__Cache:__  
+Central database of the system.  This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened by the index layer.
+
+### Cache:  
 SOLR
 
+### Python/Django
+__Authentication & Authorization Layer:__  
+___daas_py_auth___  
+Service using JWT to first authenticate a consuming user, then build a toke with the list of allowable facilities for that user.  This token is then required to #1) hit the API layer, and #2) fetch and update data from both the DB and SOLR.
+
 __API Layer:__  
-Python (Django)
+___daas_py_api___   
+Django API service that is generic and can be used for any domain in the DaaS.  It is fully configuration driven  This setup is a custom more granular project with a managed DBMS layer. 
 
-This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened by the index layer.
 
-__Index Layer:__ 
-Python
+__Index Layer:__  
+___daas_py_idx___  
 
 This layer will listen to PostgreSQL NOTIFY events, and pull them off.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
 
