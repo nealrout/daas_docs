@@ -54,11 +54,7 @@ Secrets: dynaconf/cryptography
     │   ├───api         
     │   │   ├───domain         
     │   │   ├───api      
-    ├───daas_py_idx              (GENERIC INDEXER)
-    ├───daas_py_api_facility     (FACILITY API)
-    │   ├───facility_api         
-    │   │   ├───facility         
-    │   │   ├───facility_api      
+    ├───daas_py_idx              (GENERIC INDEXER)   
     ├───daas_py_common           (COMMON)
     │   ├───util                 
     ├───daas_py_config           (CONFIG)
@@ -69,8 +65,6 @@ Secrets: dynaconf/cryptography
 ### [daas_py_auth](https://github.com/nealrout/daas_py_auth) - Django Authorize/Authenticate API
 
 ### [daas_py_api](https://github.com/nealrout/daas_py_api) - Django Generic API (Main)
-
-### [daas_py_api_facility](https://github.com/nealrout/daas_py_api_facility) - Django Facility API (Main)
 
 ### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Generic Index manager - (Main).
 
