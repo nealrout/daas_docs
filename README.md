@@ -46,7 +46,7 @@ Logging: Python standarrd logger
 Configuration:  dynaconf  
 Secrets: dynaconf/cryptography
 
-## High level project structure
+## High level Python project structure
 
     daas_py                      (ROOT)
     ├───daas_py_auth             (AUTH API)
@@ -75,6 +75,8 @@ Secrets: dynaconf/cryptography
 ### [daas_solr](https://github.com/nealrout/daas_solr) - SOLR instance setup
 
 ### [daas_build](https://github.com/nealrout/daas_build) - Docker and other build/deploy stuff
+
+### [daas_airflow](https://github.com/nealrout/daas_airflow) - Apache Airflow for integration testing
 
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
