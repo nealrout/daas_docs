@@ -2,7 +2,9 @@
 
 ## Description
 
-Single repository  to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it availiable through an api layer.  It will consist of several source databases, and a SOLR instance for caching.
+Single repository to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it available through an api layer.  It will consist of several source databases, and a SOLR instance for caching.  
+
+This is a personal project started in February of 2025 to gain deep understanding of Python/Django, and further my experience in PostgreSQL.
 
 
 ## Table of Contents
@@ -18,7 +20,7 @@ Single repository  to aggregate all documentation of projects related to DaaS (D
 __PostgreSQL__  
 _Liquibase for src migrations_  
 
-Central database of the system.  This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened by the index layer.
+Central database of the system.  This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened for by the index layer.
 
 ### Cache:  
 SOLR
@@ -26,11 +28,11 @@ SOLR
 ### Python/Django
 __Authentication & Authorization Layer:__  
 ___daas_py_auth___  
-Service using JWT to first authenticate a consuming user, then build a toke with the list of allowable facilities for that user.  This token is then required to #1) hit the API layer, and #2) fetch and update data from both the DB and SOLR.
+Service using JWT to first authenticate a consuming user, then build a token with the list of allowable facilities for that user.  This token is then required to #1) hit the API layer, and #2) fetch and update data from both the DB and SOLR.
 
 __API Layer:__  
 ___daas_py_api___   
-Django API service that is generic and can be used for any domain in the DaaS.  It is fully configuration driven  This setup is a custom more granular project with a managed DBMS layer. 
+Django API service that is generic and can be used for any domain in the DaaS.  It is fully configuration driven.  This setup is a custom more abstract project with a managed DBMS layer, rather than the out of the box ORM approach.
 
 
 __Index Layer:__  
