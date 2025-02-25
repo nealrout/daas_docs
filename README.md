@@ -2,7 +2,7 @@
 
 ## Description
 
-Single repository to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall projects is to demonstrate a small platform to centralize data, and have it available through an api layer.  It will consist of several source databases, and a SOLR instance for caching.  
+Single repository to aggregate all documentation of projects related to DaaS (Data as a Service).  This overall project is to demonstrate a small platform to centralize data, and have it available through an api layer.  It will consist of several source databases, and a SOLR instance for caching.  
 
 This is a personal project started in February of 2025 to gain deep understanding of Python/Django, and further my experience in PostgreSQL.
 
@@ -20,7 +20,7 @@ This is a personal project started in February of 2025 to gain deep understandin
 __PostgreSQL__  
 _Liquibase for src migrations_  
 
-Central database of the system.  This layer will handle read/writes of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened for by the index layer.
+Central database of the system.  This layer will handle read/write of objects.  When records are updated in the database, they will trigger a NOTIFY event; which is being listened to by the index layer.
 
 ### Cache:  
 SOLR
@@ -32,19 +32,19 @@ Service using JWT to first authenticate a consuming user, then build a token wit
 
 __API Layer:__  
 ___daas_py_api___   
-Django API service that is generic and can be used for any domain in the DaaS.  It is fully configuration driven.  This setup is a custom more abstract project with a managed DBMS layer, rather than the out of the box ORM approach.
+Django API service that is generic and can be used for any domain in the DaaS.  It is fully configuration-driven.  This setup is a more customized and abstract project with a managed DBMS layer, rather than the out of the box ORM approach.
 
 
 __Index Layer:__  
 ___daas_py_idx___  
 
-This layer will listen to PostgreSQL NOTIFY events, and pull them off.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
+This layer will listen to PostgreSQL NOTIFY events, and process them.  They will then be processed in batches of either quantity X or time Y.  This way we can control batching.  For example, process every 100 records or every 10 seconds.  Whichever comes first.
 
 [example](https://github.com/nealrout/daas_py_idx/blob/develop/daas_py_idx/main.py)
 
 
 __Common components:__  
-Logging: Python standarrd logger  
+Logging: Python standard logger  
 Configuration:  dynaconf  
 Secrets: dynaconf/cryptography
 
