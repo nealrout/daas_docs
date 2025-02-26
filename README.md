@@ -68,7 +68,7 @@ Secrets: dynaconf/cryptography
 
 ### [daas_py_api](https://github.com/nealrout/daas_py_api) - Django Generic API (Main)
 
-### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Generic Index manager - (Main).
+### [daas_py_idx](https://github.com/nealrout/daas_py_idx) - Generic Index manager - (Main)
 
 ### [daas_py_common](https://github.com/nealrout/daas_py_common) - Common Utils
 
@@ -79,6 +79,8 @@ Secrets: dynaconf/cryptography
 ### [daas_build](https://github.com/nealrout/daas_build) - Docker and other build/deploy stuff
 
 ### [daas_airflow](https://github.com/nealrout/daas_airflow) - Apache Airflow for integration testing
+
+### [daas_py_web](https://github.com/nealrout/daas_py_web) - Web application using platform
 
 ## Architecture
 ![My Project Logo](daas_arch_high.png)
